@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+@mixin ease-in {
+  transition: all 0.3s ease 0s;
+  &:hover {
+    color: $primaryColor;
+  }
+}
+
+$primaryColor: #38d39f;
+
+* {
+  font-family: nunito, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid #777777;
+}
+
+a {
+  color: black;
+  @include ease-in;
+  text-decoration: none;
+}
+
+.menu-nav {
+  height: 2vh;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  margin: 1em 25em;
+}
+
+.nav-wrapper {
+  top: 0;
+}
+
+.nav-links {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 1.6em;
+}
+
+main {
+  .home,
+  .projects,
+  .blog,
+  .contact {
+    height: 94vh;
+    position: absolute;
+    width: 100%;
+  }
+
+  .home-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0em 25em;
+    img {
+      height: 55%;
+      margin-left: 10rem;
+    }
+    h1 {
+      font-size: 50px;
+    }
+    h3 {
+      font-size: 20px;
+      margin: 0 0rem 3rem 0;
+    }
+  }
+
+  //Blog content
+  .blog-content {
+    margin-top: 3em;
+    margin-left: 25em;
+    margin-right: 25em;
+    h3 {
+      margin-bottom: 2.4rem;
+    }
+    h1 {
+      font-size: 50px;
+      text-align: center;
+      padding-top: 0.5em;
+    }
+    h3 {
+      text-align: center;
+    }
+    article {
+      background: white;
+      border-radius: 25px;
+    }
+    p {
+      padding: 0 2em 1em 1em;
+    }
+    img {
+      width: 100%;
+      height: 400px;
+      display: block;
+    }
+  }
+
+  // Projects Showcase Content
+  .projects-content {
+    padding-top: 3em;
+    padding-left: 25em;
+    padding-right: 25em;
+  }
+
+  .showcase-container {
+    padding-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    img {
+      width: 100%;
+      height: 200px;
+      border: 3px #fff solid;
+
+      &:hover {
+        transition: all 0.3s ease 0s;
+        opacity: 0.6;
+        border-color: $primaryColor;
+        background-color: $primaryColor;
+      }
+    }
+  }
+
+  // Button Styles
+  .btn {
+    display: block;
+    padding: 0.3rem;
+    border: 0;
+    margin-bottom: 0.3em;
+    color: #fff;
+    &:hover {
+      background: $primaryColor;
+      color: set-text-color($primaryColor);
+    }
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .btn-dark {
+    @extend .btn;
+    background: darken($primaryColor, 50);
+    color: #fff;
+  }
+
+  .btn-light {
+    @extend .btn;
+    background: lighten($primaryColor, 50);
+    color: #333;
+  }
+
+  .home {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  }
+
+  .projects {
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+  }
+
+  .blog {
+    background-image: url(../images/mtn2.jpg);
+  }
+
+  .contact {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  }
+}
