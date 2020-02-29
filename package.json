@@ -5,7 +5,7 @@
   "homepage": "https://johnduongoc.github.io/MyPortfolio/",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o scss/ --recursive",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist",
     "build": "parcel build index.html",
     "start": "parcel serve index.html"
