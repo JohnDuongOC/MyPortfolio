@@ -2,12 +2,14 @@
   "name": "portfolio_alpha",
   "version": "1.0.0",
   "description": "My portfolio website",
-  "homepage": "https://johnduongoc.github.io/MyPortfolio",
+  "homepage": "https://johnduongoc.github.io/MyPortfolio/",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "sass": "node-sass -w scss/ -o scss/ --recursive",
     "deploy": "gh-pages -d dist",
-    "start": "parcel index.html"
+    "build": "parcel build index.html",
+    "start": "parcel serve index.html"
+  },
   },
   "author": "",
   "license": "ISC",
