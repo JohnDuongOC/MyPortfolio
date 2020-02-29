@@ -191,7 +191,7 @@ main .projects {
 }
 
 main .blog {
-  background-image: url(/mtn2.f0c6d41e.jpg);
+  background-image: url(../images/mtn2.jpg);
 }
 
 main .contact {
@@ -204,7 +204,4 @@ main .contact {
   );
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
-
-
-
-/*# sourceMappingURL=/main.604cdd96.css.map */
+/*# sourceMappingURL=main.css.map */
